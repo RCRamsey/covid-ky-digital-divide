@@ -65,4 +65,4 @@ typings/
 /src/config.js
 
 # Large Files
-digital_divide/notebooks/data/project-files
+notebooks/data/project-files
