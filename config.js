@@ -1,5 +1,5 @@
 var config = {
-  style: 'mapbox://styles/rcramsey/ckwmi0qsw1xxi14lrlwfpvcpf',
+  style: 'mapbox://styles/rcramsey/cl0fo22zx000514ms9ohin6tx',
   accessToken:
     'pk.eyJ1IjoicmNyYW1zZXkiLCJhIjoiY2wwNXM5endyMXBiMDNjcWc5bnppdG0yMiJ9.9MbIKC6TTOPvXZJoKwwKBw',
   showMarkers: false,
@@ -7,9 +7,9 @@ var config = {
   theme: 'dark',
   use3dTerrain: false,
   title: 'Digital Divide During COVID-19',
-  subtitle: 'Fayette, Jefferson & Kenton Kentucky',
+  subtitle: 'Fayette, Kentucky',
   byline:
-    'Exploring the three most populated counties of KY for impact of remote learning during 2019 ',
+    'Exploring Fayette County for impact of remote learning during 2019 on Specific Student Populations',
   footer: 'Authors: RC Ramsey',
   chapters: [
     {
@@ -17,7 +17,7 @@ var config = {
       alignment: 'left',
       hidden: false,
       title: 'Introduction',
-         image: 'images/motocross.svg',
+         // image: 'images/motocross.svg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       location: {
@@ -30,17 +30,17 @@ var config = {
       rotateAnimation: false,
       callback: '',
       onChapterEnter: [
-        // {
-        //     layer: 'layer-name',
-        //     opacity: 1,
-        //     duration: 5000
-        // }
+         {
+             layer: 'tlkycnty19digital-json-ttol_housholds copy',
+             opacity: 1,
+             duration: 5000
+            }
       ],
       onChapterExit: [
-        // {
-        //     layer: 'layer-name',
-        //     opacity: 0
-        // }
+         {
+             layer: 'tlkycnty19digital-json-ttol_housholds copy',
+             opacity: 0
+         }
       ],
     },
     {
@@ -59,8 +59,18 @@ var config = {
       mapAnimation: 'flyTo',
       rotateAnimation: false,
       callback: '',
-      onChapterEnter: [],
-      onChapterExit: [],
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19dicital-json-nocomp',
+          opacity: 0.01,
+          duration: 5000
+         }
+      ],
+      onChapterExit: [{
+        layer: 'tlkycnty19dicital-json-nocomp',
+        opacity: 0,
+        duration: 5000
+       }],
     },
     {
       id: 'jefferson',
@@ -78,7 +88,13 @@ var config = {
       mapAnimation: 'flyTo',
       rotateAnimation: false,
       callback: '',
-      onChapterEnter: [],
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19dicital-json-nocomp',
+          opacity: 0,
+          duration: 5000
+         }
+      ],
       onChapterExit: [],
     },  
     {
@@ -97,7 +113,13 @@ var config = {
       mapAnimation: 'flyTo',
       rotateAnimation: false,
       callback: '',
-      onChapterEnter: [],
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19dicital-json-nocomp',
+          opacity: 0,
+          duration: 5000
+         }
+      ],
       onChapterExit: [],
     },  
   ],
