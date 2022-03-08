@@ -6,20 +6,22 @@ var config = {
   markerColor: '#3FB1CE',
   theme: 'dark',
   use3dTerrain: false,
-  title: 'Digital Divide During COVID-19',
-  subtitle: 'Fayette, Kentucky',
+  title: 'Digital Divide Grows during COVID-19',
+  subtitle: 'Classism of remote learning',
   byline:
-    'Exploring Fayette County for impact of remote learning during 2019 on Specific Student Populations',
+    'Exploring the inherent privileges of wealthy student households of Fayette County KY',
   footer: 'Authors: RC Ramsey',
   chapters: [
+
+
     {
       id: 'slug-style-id',
       alignment: 'left',
       hidden: false,
       title: 'Introduction',
-         // image: 'images/motocross.svg',
+          //image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'In December 2019 the world was introduced to COVID-19 which rapidly grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. This storymap begins on the three most populated counties in KY. ',
       location: {
         center: [-84.2700, 38.8393],
         zoom: 7,
@@ -33,7 +35,7 @@ var config = {
          {
              layer: 'tlkycnty19digital-json-ttol_housholds copy',
              opacity: 1,
-             duration: 5000
+             duration: 500
             }
       ],
       onChapterExit: [
@@ -43,16 +45,19 @@ var config = {
          }
       ],
     },
+
+
+
     {
       id: 'fayette',
       alignment: 'right',
       hidden: false,
-      title: 'Here is Fayette County',
-      //   image: './path/to/image/source.png',
-      description: 'Copy these sections to add to your story.',
+      title: 'Fayette County',
+        image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
+      description: '5.2% of student households within Fayette County did not have access to a computer at home. Translating to approximately 6,860 student households.',
       location: {
         center: [-84.49610, 38.03089],
-        zoom: 12,
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -61,27 +66,29 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19dicital-json-nocomp',
-          opacity: 0.01,
-          duration: 5000
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 500
          }
       ],
       onChapterExit: [{
-        layer: 'tlkycnty19dicital-json-nocomp',
+        layer: 'tlkycnty19digital-json-nocomp',
         opacity: 0,
-        duration: 5000
+        duration: 500
        }],
     },
+
+
     {
       id: 'jefferson',
       alignment: 'right',
       hidden: false,
-      title: 'Here is Jefferson County',
+      title: 'Jefferson County',
       //   image: './path/to/image/source.png',
-      description: 'Copy these sections to add to your story.',
+      description: '7.2% of student households within Jefferson County did not have access to a computer at home. Translating to approximately 22,765 student households.',
       location: {
         center: [-85.74136, 38.22234],
-        zoom: 11.31,
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -90,23 +97,31 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19dicital-json-nocomp',
-          opacity: 0,
-          duration: 5000
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 500
          }
       ],
-      onChapterExit: [],
+      onChapterExit: [
+        {
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 500
+        }
+      ],
     },  
+
+
     {
       id: 'kenton',
       alignment: 'right',
       hidden: false,
-      title: 'Here is Kenton County',
+      title: 'Kenton County',
       //   image: './path/to/image/source.png',
-      description: 'Copy these sections to add to your story.',
+      description: '6% of student households within Kenton County did not have access to a computer at home. Translating to approximately 3,922 student households.',
       location: {
-        center: [-84.50064, 38.66018],
-        zoom: 9.5,
+        center: [-84.50064, 38.86018],
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -115,12 +130,116 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19dicital-json-nocomp',
-          opacity: 0,
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 500
+         }
+      ],
+      onChapterExit: [
+        {
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 500
+        }
+      ],
+    },  
+
+    {
+      id: 'fayette',
+      alignment: 'right',
+      hidden: false,
+      title: 'Fayette County ',
+      //   image: './path/to/image/source.png',
+      description: 'Add census bureau tracts here for break down of computer access',
+      location: {
+        center: [-84.49610, 38.03089],
+        zoom: 1,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
           duration: 5000
          }
       ],
-      onChapterExit: [],
-    },  
+      onChapterExit: [
+      //   {
+      //   layer: 'tlkycnty19digital-json-nocomp',
+      //   opacity: 0,
+      //   duration: 5000
+      //  }
+      ],
+    },
+
+
+    {
+      id: 'fayette',
+      alignment: 'right',
+      hidden: false,
+      title: 'Fayette County ',
+      //   image: './path/to/image/source.png',
+      description: 'Add census bureau tracts here for break down of smartphone only access',
+      location: {
+        center: [-84.49610, 38.03089],
+        zoom: 1,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 5000
+         }
+      ],
+      onChapterExit: [
+      //   {
+      //   layer: 'tlkycnty19digital-json-nocomp',
+      //   opacity: 0,
+      //   duration: 5000
+      //  }
+      ],
+    },
+
+    {
+      id: 'fayette',
+      alignment: 'right',
+      hidden: false,
+      title: 'Fayette County ',
+      //   image: './path/to/image/source.png',
+      description: 'Add census bureau tracts here for no internet by household income',
+      location: {
+        center: [-84.49610, 38.03089],
+        zoom: 1,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'tlkycnty19digital-json-nocomp',
+          opacity: 1,
+          duration: 5000
+         }
+      ],
+      onChapterExit: [
+      //   {
+      //   layer: 'tlkycnty19digital-json-nocomp',
+      //   opacity: 0,
+      //   duration: 5000
+      //  }
+      ],
+    },
+    
   ],
 };
