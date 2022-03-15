@@ -1,5 +1,5 @@
 var config = {
-  style: 'mapbox://styles/rcramsey/cl0fo22zx000514ms9ohin6tx',
+  style: 'mapbox://styles/rcramsey/cl0fo22zx000514ms9ohin6tx', 
   accessToken:
     'pk.eyJ1IjoicmNyYW1zZXkiLCJhIjoiY2wwNXM5endyMXBiMDNjcWc5bnppdG0yMiJ9.9MbIKC6TTOPvXZJoKwwKBw',
   showMarkers: false,
@@ -183,7 +183,7 @@ var config = {
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Add census bureau tracts here for break down of smartphone only access',
+      description: 'Percent of student households without internet access whose household income is <20k',
       location: {
         center: [-84.49610, 38.03089],
         zoom: 1,
@@ -195,17 +195,17 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19digital-json-nocomp',
+          layer: 'noIntless20k',
           opacity: 1,
           duration: 5000
          }
       ],
       onChapterExit: [
-      //   {
-      //   layer: 'tlkycnty19digital-json-nocomp',
-      //   opacity: 0,
-      //   duration: 5000
-      //  }
+        {
+        layer: 'noIntless20k',
+        opacity: 0,
+        duration: 5000
+       }
       ],
     },
 
@@ -215,7 +215,7 @@ var config = {
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Add census bureau tracts here for no internet by household income',
+      description: 'Percent of student households without internet access whose household income is 24k-74.9k',
       location: {
         center: [-84.49610, 38.03089],
         zoom: 1,
@@ -227,19 +227,52 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19digital-json-nocomp',
+          layer: 'noInt24kto75k',
           opacity: 1,
           duration: 5000
          }
       ],
       onChapterExit: [
-      //   {
-      //   layer: 'tlkycnty19digital-json-nocomp',
-      //   opacity: 0,
-      //   duration: 5000
-      //  }
+        {
+        layer: 'noInt24kto75k',
+        opacity: 0,
+        duration: 5000
+       }
       ],
     },
+
+    {
+      id: 'fayette',
+      alignment: 'right',
+      hidden: false,
+      title: 'Fayette County ',
+      //   image: './path/to/image/source.png',
+      description: 'Percent of student households without internet access whose household income is 75K +',
+      location: {
+        center: [-84.49610, 38.03089],
+        zoom: 1,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'noInt75kup',
+          opacity: 1,
+          duration: 5000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'noInt75kup',
+        opacity: 0,
+        duration: 5000
+       }
+      ],
+    },
+
     
   ],
 };
