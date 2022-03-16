@@ -145,15 +145,15 @@ var config = {
     },  
 
     {
-      id: 'fayette',
+      id: 'fayettetracts',
       alignment: 'right',
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Percent of student households without access to a computer by Census Tract',
+      description: 'Percent of student households without access to a computer by Census Tract. Highest 29%',
       location: {
-        center: [-84.49610, 38.03089],
-        zoom: 1,
+        center: [-84.29610, 38.03089],
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -164,29 +164,29 @@ var config = {
         {
           layer: 'nocomputer',
           opacity: 1,
-          duration: 5000
+          duration: 2000
          }
       ],
       onChapterExit: [
         {
         layer: 'nocomputer',
         opacity: 0,
-        duration: 5000
+        duration: 2000
        }
       ],
     },
 
 
     {
-      id: 'fayette',
+      id: 'fayetteless20k',
       alignment: 'right',
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Percent of households with income <20k without internet access.',
+      description: 'Percent of households with income <20k without internet access. Highest 100%',
       location: {
-        center: [-84.49610, 38.03089],
-        zoom: 1,
+        center: [-84.29610, 38.03089],
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -197,28 +197,28 @@ var config = {
         {
           layer: 'noIntless20k',
           opacity: 1,
-          duration: 5000
+          duration: 2000
          }
       ],
       onChapterExit: [
         {
         layer: 'noIntless20k',
         opacity: 0,
-        duration: 5000
+        duration: 2000
        }
       ],
     },
 
     {
-      id: 'fayette',
+      id: 'fayette24kplus',
       alignment: 'right',
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Percent of households with income 24k-74.9k without internet access.',
+      description: 'Percent of households with income 24k-74.9k without internet access. Highest 36%',
       location: {
-        center: [-84.49610, 38.03089],
-        zoom: 1,
+        center: [-84.29610, 38.03089],
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -229,28 +229,28 @@ var config = {
         {
           layer: 'noInt24kto75k',
           opacity: 1,
-          duration: 5000
+          duration: 2000
          }
       ],
       onChapterExit: [
         {
         layer: 'noInt24kto75k',
         opacity: 0,
-        duration: 5000
+        duration: 2000
        }
       ],
     },
 
     {
-      id: 'fayette',
+      id: 'fayette75k',
       alignment: 'right',
       hidden: false,
       title: 'Fayette County ',
       //   image: './path/to/image/source.png',
-      description: 'Percent of households with income > 75K without internet access.',
+      description: 'Percent of households with income > 75K without internet access. Highest 28.6%',
       location: {
-        center: [-84.49610, 38.03089],
-        zoom: 1,
+        center: [-84.29610, 38.03089],
+        zoom: 10,
         pitch: 0,
         bearing: 0,
       },
@@ -261,18 +261,17 @@ var config = {
         {
           layer: 'noInt75kup',
           opacity: 1,
-          duration: 5000
+          duration: 2000
          }
       ],
       onChapterExit: [
         {
         layer: 'noInt75kup',
         opacity: 0,
-        duration: 5000
+        duration: 2000
        }
       ],
-    },
-
+    }
     
   ],
 };
