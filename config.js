@@ -19,9 +19,9 @@ var config = {
       alignment: 'left',
       hidden: false,
       title: 'Introduction',
-          //image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
+          image: 'images/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg',
       description:
-        'In December 2019 the world was introduced to COVID-19 which rapidly grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. This storymap begins on the three most populated counties in KY. ',
+        'In December 2019 the world was introduced to COVID-19 which rapidly grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. <p> Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. (Photo by <a href="https://unsplash.com/@fusion_medical_animation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fusion Medical Animation</a> on <a href="https://unsplash.com/s/photos/covid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)',
       location: {
         center: [-86.2700, 38.4393],
         zoom: 7,
@@ -41,7 +41,7 @@ var config = {
       onChapterExit: [
          {
              layer: 'fayette-only-tlkycnty19digital',
-             opacity: 0
+             opacity: 1
          }
       ],
     },
@@ -54,7 +54,7 @@ var config = {
       hidden: false,
       title: 'Fayette County',
         image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
-      description: '5.2% of student households did not have access to a computer at home. This translates to approximately 6,860 student households without a means to participate in live/remote instruction.',
+      description: '<b><FONT COLOR="#9ecae1">5.2%</FONT></b> of student households did not have access to a computer at home. <p> This translates to approximately <b><FONT COLOR="#9ecae1">6,860</FONT COLOR></b> student households without a means to participate in live/remote instruction.',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -73,7 +73,7 @@ var config = {
       ],
       onChapterExit: [{
         layer: 'tlkycnty19digital-json-nocomp',
-        opacity: 1,
+        opacity: 0,
         duration: 500
        }],
     },
@@ -148,9 +148,9 @@ var config = {
       id: 'fayettetracts',
       alignment: 'right',
       hidden: false,
-      title: 'Fayette County ',
-      //   image: './path/to/image/source.png',
-      description: 'Percent of student households without access to a computer by Census Tract. Highest 29%',
+      title: 'Without Home Computer Access',
+         image: 'images/nocomphomeaccess.png',
+      description: 'Percent of student households by Census Tract. <p>Highest <b><FONT COLOR="#c51b8a">29%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -181,9 +181,9 @@ var config = {
       id: 'fayetteless20k',
       alignment: 'right',
       hidden: false,
-      title: 'Fayette County ',
-      //   image: './path/to/image/source.png',
-      description: 'Percent of households with income <20k without internet access. Highest 100%',
+      title: 'No Internet Access',
+         image: 'images/_20knoint.png',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba"><20k</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">100%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -196,7 +196,7 @@ var config = {
       onChapterEnter: [
         {
           layer: 'noIntless20k',
-          opacity: 1,
+          opacity: 0.75,
           duration: 2000
          }
       ],
@@ -213,9 +213,9 @@ var config = {
       id: 'fayette24kplus',
       alignment: 'right',
       hidden: false,
-      title: 'Fayette County ',
-      //   image: './path/to/image/source.png',
-      description: 'Percent of households with income 24k-74.9k without internet access. Highest 36%',
+      title: 'No Internet Access',
+         image: 'images/24_75knotint.png',
+      description: 'Households by Census Tract income <FONT COLOR="#807dba">24k-74.9k</FONT COLOR>. <p>Highest <b><FONT COLOR="#807dba">36%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -228,7 +228,7 @@ var config = {
       onChapterEnter: [
         {
           layer: 'noInt24kto75k',
-          opacity: 1,
+          opacity: 0.75,
           duration: 2000
          }
       ],
@@ -245,9 +245,9 @@ var config = {
       id: 'fayette75k',
       alignment: 'right',
       hidden: false,
-      title: 'Fayette County ',
-      //   image: './path/to/image/source.png',
-      description: 'Percent of households with income > 75K without internet access. Highest 28.6%',
+      title: 'No Internet Access',
+         image: 'images/75knoint.png',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -260,7 +260,7 @@ var config = {
       onChapterEnter: [
         {
           layer: 'noInt75kup',
-          opacity: 1,
+          opacity: 0.75,
           duration: 2000
          }
       ],
