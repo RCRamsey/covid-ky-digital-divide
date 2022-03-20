@@ -33,14 +33,14 @@ var config = {
       callback: '',
       onChapterEnter: [
          {
-             layer: 'tlkycnty19digital-json-ttol_housholds copy',
+             layer: 'fayette-only-tlkycnty19digital',
              opacity: 1,
              duration: 500
             }
       ],
       onChapterExit: [
          {
-             layer: 'tlkycnty19digital-json-ttol_housholds copy',
+             layer: 'fayette-only-tlkycnty19digital',
              opacity: 0
          }
       ],
@@ -54,7 +54,7 @@ var config = {
       hidden: false,
       title: 'Fayette County',
         image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
-      description: 'Within Fayette County, 5.2% of student households did not have access to a computer at home. This translates to approximately 6,860 student households without a means to participate in live/remote instruction.',
+      description: '5.2% of student households did not have access to a computer at home. This translates to approximately 6,860 student households without a means to participate in live/remote instruction.',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -79,70 +79,70 @@ var config = {
     },
 
 
-    {
-      id: 'jefferson',
-      alignment: 'right',
-      hidden: false,
-      title: 'Jefferson County',
-      //   image: './path/to/image/source.png',
-      description: 'At Jefferson County, 7.2% of student households did not have access to a computer at home. Translating to approximately 22,765 student households.',
-      location: {
-        center: [-85.38136, 38.22234],
-        zoom: 10,
-        pitch: 0,
-        bearing: 0,
-      },
-      mapAnimation: 'flyTo',
-      rotateAnimation: false,
-      callback: '',
-      onChapterEnter: [
-        {
-          layer: 'tlkycnty19digital-json-nocomp',
-          opacity: 1,
-          duration: 500
-         }
-      ],
-      onChapterExit: [
-        {
-          layer: 'tlkycnty19digital-json-nocomp',
-          opacity: 1,
-          duration: 500
-        }
-      ],
-    },  
+    // {
+    //   id: 'jefferson',
+    //   alignment: 'right',
+    //   hidden: false,
+    //   title: 'Jefferson County',
+    //   //   image: './path/to/image/source.png',
+    //   description: 'At Jefferson County, 7.2% of student households did not have access to a computer at home. Translating to approximately 22,765 student households.',
+    //   location: {
+    //     center: [-85.38136, 38.22234],
+    //     zoom: 10,
+    //     pitch: 0,
+    //     bearing: 0,
+    //   },
+    //   mapAnimation: 'flyTo',
+    //   rotateAnimation: false,
+    //   callback: '',
+    //   onChapterEnter: [
+    //     {
+    //       layer: 'tlkycnty19digital-json-nocomp',
+    //       opacity: 1,
+    //       duration: 500
+    //      }
+    //   ],
+    //   onChapterExit: [
+    //     {
+    //       layer: 'tlkycnty19digital-json-nocomp',
+    //       opacity: 1,
+    //       duration: 500
+    //     }
+    //   ],
+    // },  
 
 
-    {
-      id: 'kenton',
-      alignment: 'right',
-      hidden: false,
-      title: 'Kenton County',
-      //   image: './path/to/image/source.png',
-      description: 'While in Kenton County 6% of student households did not have access to a computer at home. Translating to approximately 3,922 student households.',
-      location: {
-        center: [-84.50064, 38.96018],
-        zoom: 10,
-        pitch: 0,
-        bearing: 0,
-      },
-      mapAnimation: 'flyTo',
-      rotateAnimation: false,
-      callback: '',
-      onChapterEnter: [
-        {
-          layer: 'tlkycnty19digital-json-nocomp',
-          opacity: 1,
-          duration: 500
-         }
-      ],
-      onChapterExit: [
-        {
-          layer: 'tlkycnty19digital-json-nocomp',
-          opacity: 0,
-          duration: 500
-        }
-      ],
-    },  
+    // {
+    //   id: 'kenton',
+    //   alignment: 'right',
+    //   hidden: false,
+    //   title: 'Kenton County',
+    //   //   image: './path/to/image/source.png',
+    //   description: 'While in Kenton County 6% of student households did not have access to a computer at home. Translating to approximately 3,922 student households.',
+    //   location: {
+    //     center: [-84.50064, 38.96018],
+    //     zoom: 10,
+    //     pitch: 0,
+    //     bearing: 0,
+    //   },
+    //   mapAnimation: 'flyTo',
+    //   rotateAnimation: false,
+    //   callback: '',
+    //   onChapterEnter: [
+    //     {
+    //       layer: 'tlkycnty19digital-json-nocomp',
+    //       opacity: 1,
+    //       duration: 500
+    //      }
+    //   ],
+    //   onChapterExit: [
+    //     {
+    //       layer: 'tlkycnty19digital-json-nocomp',
+    //       opacity: 0,
+    //       duration: 500
+    //     }
+    //   ],
+    // },  
 
     {
       id: 'fayettetracts',
