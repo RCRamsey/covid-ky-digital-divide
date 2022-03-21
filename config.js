@@ -170,6 +170,40 @@ var config = {
       onChapterExit: [
         {
         layer: 'nocomputer',
+        opacity: 1,
+        duration: 2000
+       }
+      ],
+    },
+
+
+
+    {
+      id: 'fayetteLetter',
+      alignment: 'right',
+      hidden: false,
+      title: 'Fayette County Superintendent Letter',
+         image: 'images/fay_letter_april.png',
+      description: '2 April 2020, Fayette County Public School Superintendent letter to its Public School Families.',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'nocomputer',
+          opacity: 1,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'nocomputer',
         opacity: 0,
         duration: 2000
        }
@@ -272,6 +306,10 @@ var config = {
        }
       ],
     }
+
+    // insert chapter here about handing out hotspots? 
+    // or additional alternatives
+    // still comment on what this means for the future
     
   ],
 };
