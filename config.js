@@ -10,7 +10,7 @@ var config = {
   subtitle: 'Classism of remote learning',
   byline:
     'Exploring the inherent privileges of wealthy student households of Fayette County KY',
-  footer: 'Authors: RC Ramsey',
+  footer: 'Author: RC Ramsey <p>References: <a href="https://www.fcps.net/cms/lib/KY01807169/Centricity/Domain/10653/April2_letter.pdf">Fayette County Superintendent Letter</a>',
   chapters: [
 
 
@@ -21,7 +21,7 @@ var config = {
       title: 'Introduction',
           image: 'images/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg',
       description:
-        'In December 2019 the world was introduced to COVID-19 which rapidly grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. <p> Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. (Photo by <a href="https://unsplash.com/@fusion_medical_animation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fusion Medical Animation</a> on <a href="https://unsplash.com/s/photos/covid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)',
+        'COVID-19 grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. <p> Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. (Photo of COVID-19 Viral cell by <a href="https://unsplash.com/@fusion_medical_animation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fusion Medical Animation</a> on <a href="https://unsplash.com/s/photos/covid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)',
       location: {
         center: [-86.2700, 38.4393],
         zoom: 7,
@@ -66,83 +66,18 @@ var config = {
       callback: '',
       onChapterEnter: [
         {
-          layer: 'tlkycnty19digital-json-nocomp',
+          layer: 'fayette-only-tlkycnty19digital',
           opacity: 1,
           duration: 500
          }
       ],
       onChapterExit: [{
-        layer: 'tlkycnty19digital-json-nocomp',
+        layer: 'fayette-only-tlkycnty19digital',
         opacity: 0,
         duration: 500
        }],
     },
 
-
-    // {
-    //   id: 'jefferson',
-    //   alignment: 'right',
-    //   hidden: false,
-    //   title: 'Jefferson County',
-    //   //   image: './path/to/image/source.png',
-    //   description: 'At Jefferson County, 7.2% of student households did not have access to a computer at home. Translating to approximately 22,765 student households.',
-    //   location: {
-    //     center: [-85.38136, 38.22234],
-    //     zoom: 10,
-    //     pitch: 0,
-    //     bearing: 0,
-    //   },
-    //   mapAnimation: 'flyTo',
-    //   rotateAnimation: false,
-    //   callback: '',
-    //   onChapterEnter: [
-    //     {
-    //       layer: 'tlkycnty19digital-json-nocomp',
-    //       opacity: 1,
-    //       duration: 500
-    //      }
-    //   ],
-    //   onChapterExit: [
-    //     {
-    //       layer: 'tlkycnty19digital-json-nocomp',
-    //       opacity: 1,
-    //       duration: 500
-    //     }
-    //   ],
-    // },  
-
-
-    // {
-    //   id: 'kenton',
-    //   alignment: 'right',
-    //   hidden: false,
-    //   title: 'Kenton County',
-    //   //   image: './path/to/image/source.png',
-    //   description: 'While in Kenton County 6% of student households did not have access to a computer at home. Translating to approximately 3,922 student households.',
-    //   location: {
-    //     center: [-84.50064, 38.96018],
-    //     zoom: 10,
-    //     pitch: 0,
-    //     bearing: 0,
-    //   },
-    //   mapAnimation: 'flyTo',
-    //   rotateAnimation: false,
-    //   callback: '',
-    //   onChapterEnter: [
-    //     {
-    //       layer: 'tlkycnty19digital-json-nocomp',
-    //       opacity: 1,
-    //       duration: 500
-    //      }
-    //   ],
-    //   onChapterExit: [
-    //     {
-    //       layer: 'tlkycnty19digital-json-nocomp',
-    //       opacity: 0,
-    //       duration: 500
-    //     }
-    //   ],
-    // },  
 
     {
       id: 'fayettetracts',
@@ -150,7 +85,7 @@ var config = {
       hidden: false,
       title: 'Without Home Computer Access',
          image: 'images/nocomphomeaccess.png',
-      description: 'Percent of student households by Census Tract. <p>Highest <b><FONT COLOR="#c51b8a">29%</FONT COLOR></b>',
+      description: 'Percent of student households by Census Tract. <p> No data for a Census Tract indicates there were no sample observations or too few sample observations to compute an estimate. <p>Highest <b><FONT COLOR="#c51b8a">29%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -184,7 +119,7 @@ var config = {
       hidden: false,
       title: 'Fayette County Superintendent Letter',
          image: 'images/fay_letter_april.png',
-      description: '2 April 2020, Fayette County Public School Superintendent letter to its Public School Families.',
+      description: 'On April 2, 2020 Fayette County Public School Superintendent mailed home a letter to its Public School Families indicating the process by which needs were being met for remote learning. <p> This letter appears to address the digital divide by providing students with access to a digital device. What this does not cover however are students who lack internet access.',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -307,9 +242,7 @@ var config = {
       ],
     }
 
-    // insert chapter here about handing out hotspots? 
-    // or additional alternatives
-    // still comment on what this means for the future
-    
+
+
   ],
 };
