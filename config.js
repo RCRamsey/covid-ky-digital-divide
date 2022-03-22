@@ -180,6 +180,37 @@ var config = {
       ],
     },
 
+    {
+      id: 'fayetteless20kGraph',
+      alignment: 'right',
+      hidden: false,
+      title: 'No Internet Access',
+         image: 'images/noInt_20kGraph.png',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba"><20k</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">100%</FONT COLOR></b>',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'noIntless20k',
+          opacity: 0.75,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'noIntless20k',
+        opacity: 0,
+        duration: 2000
+       }
+      ],
+    },
 
     {
       id: 'fayetteless20k',
@@ -214,12 +245,12 @@ var config = {
     },
 
     {
-      id: 'fayette24kplus',
+      id: 'fayette24kplus_graph',
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
-         image: 'images/24_75knotint.png',
-      description: 'Households by Census Tract income <FONT COLOR="#807dba">24k-74.9k</FONT COLOR>. <p>Highest <b><FONT COLOR="#807dba">36%</FONT COLOR></b>',
+         image: 'images/noInt20_74kGraph.png',
+      description: 'Households by Census Tract income <FONT COLOR="#807dba">20k-74.9k</FONT COLOR>. <p>Highest <b><FONT COLOR="#807dba">36%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -246,11 +277,75 @@ var config = {
     },
 
     {
+      id: 'fayette24kplus',
+      alignment: 'right',
+      hidden: false,
+      title: 'No Internet Access',
+         image: 'images/_20knoint.png',
+      description: 'Households by Census Tract income <FONT COLOR="#807dba">20k-74.9k</FONT COLOR>. <p>Highest <b><FONT COLOR="#807dba">36%</FONT COLOR></b>',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'noInt24kto75k',
+          opacity: 0.75,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'noInt24kto75k',
+        opacity: 0,
+        duration: 2000
+       }
+      ],
+    },
+
+    {
+      id: 'fayette75k_graph',
+      alignment: 'right',
+      hidden: false,
+      title: 'No Internet Access',
+         image: 'images/noInt74kGraph.png',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'noInt75kup',
+          opacity: 0.75,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'noInt75kup',
+        opacity: 0,
+        duration: 2000
+       }
+      ],
+    },
+
+    {
       id: 'fayette75k',
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
-         image: 'images/75knoint.png',
+         image: 'images/_20knoint.png',
       description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
@@ -276,8 +371,6 @@ var config = {
        }
       ],
     }
-
-
 
   ],
 };
