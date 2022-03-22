@@ -206,7 +206,7 @@ var config = {
       onChapterExit: [
         {
         layer: 'noIntless20k',
-        opacity: 0,
+        opacity: 0.75,
         duration: 2000
        }
       ],
@@ -245,7 +245,7 @@ var config = {
     },
 
     {
-      id: 'fayette24kplus_graph',
+      id: 'fayette20kplusGraph',
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
@@ -270,14 +270,14 @@ var config = {
       onChapterExit: [
         {
         layer: 'noInt24kto75k',
-        opacity: 0,
+        opacity: 0.75,
         duration: 2000
        }
       ],
     },
 
     {
-      id: 'fayette24kplus',
+      id: 'fayette20kplus',
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
@@ -309,11 +309,43 @@ var config = {
     },
 
     {
-      id: 'fayette75k_graph',
+      id: 'fayette75kGraph',
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
          image: 'images/noInt74kGraph.png',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'noInt75kup',
+          opacity: 0.75,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'noInt75kup',
+        opacity: 0.75,
+        duration: 2000
+       }
+      ],
+    },
+
+    {
+      id: 'fayette75k',
+      alignment: 'right',
+      hidden: false,
+      title: 'No Internet Access',
+         image: 'images/_20knoint.png',
       description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
@@ -340,13 +372,14 @@ var config = {
       ],
     },
 
+
     {
-      id: 'fayette75k',
-      alignment: 'right',
+      id: 'wrapUp',
+      alignment: 'center',
       hidden: false,
-      title: 'No Internet Access',
-         image: 'images/_20knoint.png',
-      description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">28.6%</FONT COLOR></b>',
+      title: 'Final Words',
+        //  image: 'images/_20knoint.png',
+      description: 'Wrapup Text',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
