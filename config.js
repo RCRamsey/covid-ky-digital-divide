@@ -41,7 +41,7 @@ var config = {
       onChapterExit: [
          {
              layer: 'fayette-only-tlkycnty19digital',
-             opacity: 1
+             opacity: 0
          }
       ],
     },
@@ -78,13 +78,48 @@ var config = {
        }],
     },
 
+    {
+      id: 'fayettetracts',
+      alignment: 'right',
+      hidden: false,
+      title: 'Without Home Computer Access',
+        image: 'images/noHomeCompGraph.png',
+      description: 'Percent of student households by Census Tract. <p>Highest <b><FONT COLOR="#c51b8a">29%</FONT COLOR></b>',
+      location: {
+        center: [-84.29610, 38.03089],
+        zoom: 10,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: 'flyTo',
+      rotateAnimation: false,
+      callback: '',
+      onChapterEnter: [
+        {
+          layer: 'nocomputer',
+          opacity: 1,
+          duration: 2000
+         }
+      ],
+      onChapterExit: [
+        {
+        layer: 'nocomputer',
+        opacity: 1,
+        duration: 2000
+       }
+      ],
+    },
+
+
+
+
 
     {
       id: 'fayettetracts',
       alignment: 'right',
       hidden: false,
       title: 'Without Home Computer Access',
-         image: 'images/nocomphomeaccess.png',
+          image: 'images/nocomphomeaccess.png',
       description: 'Percent of student households by Census Tract. <p> No data for a Census Tract indicates there were no sample observations or too few sample observations to compute an estimate. <p>Highest <b><FONT COLOR="#c51b8a">29%</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
