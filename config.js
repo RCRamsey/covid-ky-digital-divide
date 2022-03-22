@@ -10,7 +10,7 @@ var config = {
   subtitle: 'Classism of remote learning',
   byline:
     'Exploring the inherent privileges of wealthy student households of Fayette County KY',
-  footer: 'Author: RC Ramsey <p>References: <a href="https://www.fcps.net/cms/lib/KY01807169/Centricity/Domain/10653/April2_letter.pdf">Fayette County Superintendent Letter</a>',
+  footer: 'Author: RC Ramsey <p>References: <a href="https://www.fcps.net/cms/lib/KY01807169/Centricity/Domain/10653/April2_letter.pdf">Fayette County Superintendent Letter</a> <p> <a href="https://www.fcps.net/site/Default.aspx?PageType=3&DomainID=4&PageID=1&ViewID=6446ee88-d30c-497e-9316-3f8874b3e108&FlexDataID=42714">Fayette County Public Schools HotSpots</a>',
   chapters: [
 
 
@@ -21,10 +21,10 @@ var config = {
       title: 'Introduction',
           image: 'images/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg',
       description:
-        'COVID-19 grew into a Global Pandemic during 2020. Schools were left scrambling to reform their in person experience to remote learning. <p> Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. (Photo of COVID-19 Viral cell by <a href="https://unsplash.com/@fusion_medical_animation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fusion Medical Animation</a> on <a href="https://unsplash.com/s/photos/covid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)',
+        'COVID-19 grew into a Global Pandemic during 2020. US Schools were left scrambling to reform their in person experience to remote learning. <p> Fall of 2020 school year forced educators into a massive pivot of the learning experience. Unfortunately there was not enough time or finances to make equitable accomodations for all students. (Photo of COVID-19 Viral cell by <a href="https://unsplash.com/@fusion_medical_animation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fusion Medical Animation</a> on <a href="https://unsplash.com/s/photos/covid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)',
       location: {
-        center: [-86.2700, 38.4393],
-        zoom: 7,
+        center: [-87.2700, 38.4393],
+        zoom: 5.5,
         pitch: 0,
         bearing: 0,
       },
@@ -54,7 +54,7 @@ var config = {
       hidden: false,
       title: 'Fayette County',
         image: 'images/steinar-engeland-GwVmBgpP-PQ-unsplash.jpg',
-      description: '<b><FONT COLOR="#9ecae1">5.2%</FONT></b> of student households did not have access to a computer at home. <p> This translates to approximately <b><FONT COLOR="#9ecae1">6,860</FONT COLOR></b> student households without a means to participate in live/remote instruction.',
+      description: 'Within Fayette County Kentucky <FONT COLOR="#9ecae1">5.2%</FONT></b> of student households did not have access to a computer at home. <p> This translates to approximately <b><FONT COLOR="#9ecae1">6,860</FONT COLOR></b> student households without a means to participate in live/remote instruction.',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -186,7 +186,7 @@ var config = {
       hidden: false,
       title: 'No Internet Access',
          image: 'images/noInt_20kGraph.png',
-      description: 'Households by Census Tract income <b><FONT COLOR="#807dba"><20k</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">100%</FONT COLOR></b>',
+      description: 'Households by Census Tract income <b><FONT COLOR="#807dba"><20k</FONT COLOR></b>. <p>Highest <b><FONT COLOR="#807dba">100%</FONT COLOR></b> <p> Even with computer devices provided, those lacking internet access are still unable to participate in live remote activities. This is felt the most among those populations with lower household income. </b>',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
@@ -377,9 +377,9 @@ var config = {
       id: 'wrapUp',
       alignment: 'center',
       hidden: false,
-      title: 'Final Words',
-        //  image: 'images/_20knoint.png',
-      description: 'Wrapup Text',
+      title: 'Bridging the Divide For the Future',
+         image: 'images/bridgeDivide.png',
+      description: 'Come May 2020 the Fayette County District began ordering internet hotspots with a 6 month contract for service to provide to qualifying students. <p>Going forward though, if remote/NTI learning is leaned upon increasingly in the future, education systems will need to consider how to budget for and provide continuted support to students as opposed to temporary fixes. ',
       location: {
         center: [-84.29610, 38.03089],
         zoom: 10,
