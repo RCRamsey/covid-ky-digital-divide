@@ -384,27 +384,46 @@
         // setup resize event
         window.addEventListener('resize', scroller.resize);
 
-        // define legends
-        // let div = document.querySelector('.mapboxgl-ctrl-bottom-right')
+        // // define legends
+
+        // // use let to declare variables limited to the scope of this block statement (not global variable)
+        // // querySelector() return first element within document matching specified selector
+        // let div = document.querySelector('.mapboxgl-ctrl-bottom-left')
+        // // createElement() create new HTML div element
         // let data = document.createElement("div");
+        
+        // // set attributes to the created div element
         // data.setAttribute("id", "legend");
+        // // add 'd-none' to the div elements list of classes
         // data.classList.add("d-none");
+        
+        // // create new HTML div element 
         // let legendContent = document.createElement("div")
+        // // set attributes to the created legendContent div element
         // legendContent.setAttribute("id", "legendContent");
+        // // add legendContent div element to the initial div element created as a holder near closing tag
         // data.appendChild(legendContent)
+        // // move legendContent in data div element near opening tag
         // div.prepend(data)
 
+        // //create legend function
         // function legend(id) {
         // // add new legend based on step
-        // // console.log(id)
+        // // access name or id of chapter in config.js
+        //  console.log(id)
+
+        // // access legend styling in css
         // let legend = document.querySelector('#legend');
         // let legendContent = document.querySelector('#legendContent');
+        // // ❓ access mapbox layers 
         // let layer = map.getStyle().layers
 
-        // if (id == 'intro' || id == 'lex-holc-1936-map' || id == 'lex-holc-polygons') {
+        // // if chapter id is 'intro' make invisible
+        // // otherwise clear legend, make visible, build content and append
+        // if (id == 'intro') {
         //     legend.classList.add('d-none')
         // } else {
-        //     //remove children to clear legend
+        //     //remove children function to clear legend
         //     removeAllChildNodes(legendContent)
         //     //Make legend div visible
         //     legend.classList.remove('d-none')
@@ -412,16 +431,18 @@
         //     let pic = buildLegendContent(layer, id);
         //     //append legend content
         //     legendContent.appendChild(pic)
-        // }
+        //  }
 
         // }
 
+        // // remove all appendChilds to clear legend 
         // function removeAllChildNodes(parent) {
         //     while (parent.firstChild) {
         //     parent.removeChild(parent.firstChild);
         //     }
         // }
 
+        // // function to build content of legends 
         // function buildLegendContent(layer, id) {
         //     let paintDiv = document.createElement('div');
         //     let navTag = document.createElement('nav');
@@ -434,34 +455,19 @@
 
         //     layer.forEach(function (item) {
         //         paint = item.paint;
-        //         if (id == 'elementary-school-zones-ranking' && item.id == 'elementary-school-zones-ranking') {
+        //         if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
         //             let indexMax = item.paint['fill-color'].length;
         //             endLabel.classList.add('right');
-        //             span.style.background = "linear-gradient(to right, " + item.paint['fill-color'][4] + ", " + item
+        //             span.style.background = "linear-gradient(to right, " + item.paint['fill-color'][2] + ", " + item
         //                 .paint['fill-color'][6] + ", " + item.paint['fill-color'][indexMax - 1] + ")";
         //             label.innerHTML = item.paint['fill-color'][3];
         //             endLabel.innerHTML = item.paint['fill-color'][indexMax - 2]
         //             span.classList.add('legendSpan');
-        //             legendTitle.innerHTML = 'School Ranking';
+        //             legendTitle.innerHTML = '% No Computer';
         //             navTag.appendChild(legendTitle);
         //             navTag.appendChild(span);
         //             navTag.appendChild(label);
         //             navTag.appendChild(endLabel);
-
-        //             // point styling legend
-        //             // } else if (id == 'lex-school-cm' && item.id == 'lex-school-cm') {
-        //             // span.style = `height: 20px;
-        //             //                 width: 20px;
-        //             //                 background-color: ${paint['circle-color']};
-        //             //                 border-radius: 50%;
-        //             //                 margin-top -=15px`
-        //             // span.classList.add('legendSpan');
-        //             // label.innerHTML = 'Lexington Schools';
-        //             // label.style = `padding-left: 5px; position: relative; top: -5px;`
-        //             // legendTitle.innerHTML = 'School Locations';
-        //             // navTag.appendChild(legendTitle);
-        //             // navTag.appendChild(span)
-        //             // navTag.appendChild(label)
 
         //         //legend with pink range
         //         } else if (id == 'lexington-arrests-per-heloc' && item.id == 'lexington-arrests-per-heloc') {
@@ -479,15 +485,15 @@
         //             navTag.appendChild(endLabel)
 
         //         // legend single solid color
-        //         } else if (id == 'industriallanduse2005-holc1936' && item.id == 'industriallanduse2005-holc1936') {
+        //         } else if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
         //             span.style.background = paint['fill-color'];
-        //             legendTitle.innerHTML = 'Industrial Land Use';
+        //             legendTitle.innerHTML = '% No Computer';
         //             span.classList.add('legendSpan');
         //             navTag.appendChild(legendTitle);
         //             navTag.appendChild(span)
                 
         //         // legend triple solid colors
-        //         } else if (id == 'lexington-parks' && item.id == 'lexington-parks') {
+        //         } else if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
         //             span.innerHTML =
         //                 `<label class = "capitalize">${paint['fill-color'][2][0].toLowerCase()}</label><span class = "legendSpan" style = "background: ${paint['fill-color'][3]}"></span>
         //                 <label class = "capitalize">${paint['fill-color'][4][0].toLowerCase()}</label><span class = "legendSpan" style = "background: ${paint['fill-color'][5]}"></span>
