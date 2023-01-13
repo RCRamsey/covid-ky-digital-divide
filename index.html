@@ -120,6 +120,8 @@
         border-radius: 1px 1px 1px 1px;
         opacity: 0.80;
         color: white;
+        height: 90px;
+        width: 200px;
         }
 
         #legend h3 {
@@ -129,6 +131,14 @@
 
         .d-none {
         display: none;
+        }
+
+        .noComp {
+         background: url('images/nocomphomeaccess.png');
+        }
+
+        ._20kincome {
+            background: url('images/_20knoint.png');
         }
 
         .legendSpan {
@@ -384,127 +394,74 @@
         // setup resize event
         window.addEventListener('resize', scroller.resize);
 
-        // // define legends
+        // define legends
 
-        // // use let to declare variables limited to the scope of this block statement (not global variable)
-        // // querySelector() return first element within document matching specified selector
-        // let div = document.querySelector('.mapboxgl-ctrl-bottom-left')
-        // // createElement() create new HTML div element
-        // let data = document.createElement("div");
+        // use let to declare variables limited to the scope of this block statement (not global variable)
+        // querySelector() return first element within document matching specified selector
+        let div = document.querySelector('.mapboxgl-ctrl-bottom-left')
+        // createElement() create new HTML div element
+        let legendHolder = document.createElement("div");
         
-        // // set attributes to the created div element
-        // data.setAttribute("id", "legend");
-        // // add 'd-none' to the div elements list of classes
-        // data.classList.add("d-none");
+        // set attributes to the created div element
+        legendHolder.setAttribute("id", "legend");
+        // add 'd-none' to the div elements list of classes
+        legendHolder.classList.add("d-none");
         
-        // // create new HTML div element 
-        // let legendContent = document.createElement("div")
-        // // set attributes to the created legendContent div element
-        // legendContent.setAttribute("id", "legendContent");
-        // // add legendContent div element to the initial div element created as a holder near closing tag
-        // data.appendChild(legendContent)
-        // // move legendContent in data div element near opening tag
-        // div.prepend(data)
+        // create new HTML div element 
+        let legendContent = document.createElement("div")
+        // set attributes to the created legendContent div element
+        legendContent.setAttribute("id", "legendContent");
+        // add legendContent div element to the initial div element created as a holder near closing tag
+        legendHolder.appendChild(legendContent)
+        // move legendContent in data div element near opening tag
+        div.prepend(legendHolder)
 
-        // //create legend function
-        // function legend(id) {
-        // // add new legend based on step
-        // // access name or id of chapter in config.js
-        //  console.log(id)
+        //create legend function
+        function legend(id) {
+        // add new legend based on step
+        // access name or id of chapter in config.js
+         console.log(id)
 
-        // // access legend styling in css
-        // let legend = document.querySelector('#legend');
-        // let legendContent = document.querySelector('#legendContent');
-        // // ❓ access mapbox layers 
-        // let layer = map.getStyle().layers
+        // access legend styling in css
+        let legend = document.querySelector('#legend');
+        let legendContent = document.querySelector('#legendContent');
+        // ❓ access mapbox layers 
+        let layer = map.getStyle().layers
 
-        // // if chapter id is 'intro' make invisible
-        // // otherwise clear legend, make visible, build content and append
-        // if (id == 'intro') {
-        //     legend.classList.add('d-none')
-        // } else {
-        //     //remove children function to clear legend
-        //     removeAllChildNodes(legendContent)
-        //     //Make legend div visible
-        //     legend.classList.remove('d-none')
-        //     //build legend content
-        //     let pic = buildLegendContent(layer, id);
-        //     //append legend content
-        //     legendContent.appendChild(pic)
-        //  }
+            // if chapter id is 'intro' make invisible
+            // otherwise clear legend, make visible, build content and append
+            if (id == 'starter' || id == 'intro' || id == 'fayette') {
+                legend.classList.add('d-none')
+             
+            // } else if (id == 'fayettetractsNoComp' || id == 'fayetteLetter') {
+            //     legend.classList.add('noComp')
+        
+            // } else if (id == 'fayetteless20k' || id == 'fayette20kplus' || id == 'fayette75k') {
+            //     legend.classList.add('_20kincome')
+        
+            } else {
+                //remove children function to clear legend
+                //removeAllChildNodes(legendContent)
+                //Make legend div visible
+                legend.classList.remove('d-none')
+            } 
+            
+            //build legend content
+            // let pic = buildLegendContent(layer, id);
+            //append legend content
+            // legendContent.appendChild(pic)
+         
 
-        // }
+        }
 
-        // // remove all appendChilds to clear legend 
-        // function removeAllChildNodes(parent) {
-        //     while (parent.firstChild) {
-        //     parent.removeChild(parent.firstChild);
-        //     }
-        // }
+        // remove all appendChilds to clear legend 
+        function removeAllChildNodes(parent) {
+            while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+            }
+        }
 
-        // // function to build content of legends 
-        // function buildLegendContent(layer, id) {
-        //     let paintDiv = document.createElement('div');
-        //     let navTag = document.createElement('nav');
-        //     let span = document.createElement('span');
-        //     let label = document.createElement('label');
-        //     let endLabel = document.createElement('label');
-        //     let legendTitle = document.createElement('h3');
-        //     paintDiv.appendChild(navTag);
-        //     //console.log(id)
-
-        //     layer.forEach(function (item) {
-        //         paint = item.paint;
-        //         if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
-        //             let indexMax = item.paint['fill-color'].length;
-        //             endLabel.classList.add('right');
-        //             span.style.background = "linear-gradient(to right, " + item.paint['fill-color'][2] + ", " + item
-        //                 .paint['fill-color'][6] + ", " + item.paint['fill-color'][indexMax - 1] + ")";
-        //             label.innerHTML = item.paint['fill-color'][3];
-        //             endLabel.innerHTML = item.paint['fill-color'][indexMax - 2]
-        //             span.classList.add('legendSpan');
-        //             legendTitle.innerHTML = '% No Computer';
-        //             navTag.appendChild(legendTitle);
-        //             navTag.appendChild(span);
-        //             navTag.appendChild(label);
-        //             navTag.appendChild(endLabel);
-
-        //         //legend with pink range
-        //         } else if (id == 'lexington-arrests-per-heloc' && item.id == 'lexington-arrests-per-heloc') {
-        //             let indexMax = item.paint['fill-color'].length;
-        //             endLabel.classList.add('right');
-        //             span.style.background = "linear-gradient(to right, " + item.paint['fill-color'][4] + ", " + item
-        //                 .paint['fill-color'][indexMax - 1] + ")";
-        //             label.innerHTML = item.paint['fill-color'][3];
-        //             endLabel.innerHTML = item.paint['fill-color'][indexMax - 2]
-        //             span.classList.add('legendSpan');
-        //             legendTitle.innerHTML = 'Violent Crime Arrests';
-        //             navTag.appendChild(legendTitle);
-        //             navTag.appendChild(span)
-        //             navTag.appendChild(label)
-        //             navTag.appendChild(endLabel)
-
-        //         // legend single solid color
-        //         } else if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
-        //             span.style.background = paint['fill-color'];
-        //             legendTitle.innerHTML = '% No Computer';
-        //             span.classList.add('legendSpan');
-        //             navTag.appendChild(legendTitle);
-        //             navTag.appendChild(span)
-                
-        //         // legend triple solid colors
-        //         } else if (id == 'fayettetractsNoComp' && item.id == 'fayettetractsNoComp') {
-        //             span.innerHTML =
-        //                 `<label class = "capitalize">${paint['fill-color'][2][0].toLowerCase()}</label><span class = "legendSpan" style = "background: ${paint['fill-color'][3]}"></span>
-        //                 <label class = "capitalize">${paint['fill-color'][4][0].toLowerCase()}</label><span class = "legendSpan" style = "background: ${paint['fill-color'][5]}"></span>
-        //                 <label class = "capitalize">${paint['fill-color'][6][0].toLowerCase()}</label><span class = "legendSpan" style = "background: ${paint['fill-color'][7]}"></span>` //${paint['fill-color'][2][0]}
-        //             legendTitle.innerHTML = 'Park Type';
-        //             navTag.appendChild(legendTitle);
-        //             navTag.appendChild(span)
-        //         }
-        //     })
-        //     return paintDiv;    
-        // }
+        
 </script>
 
 </body>
