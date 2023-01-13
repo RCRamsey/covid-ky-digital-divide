@@ -248,7 +248,7 @@ var config = {
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
-         image: 'images/_20knoint.png',
+         image: 'images/twentykNoInternet.png',
       description: 'Households by Census Tract income <b><FONT COLOR="#807dba"><20k</FONT COLOR></b>. <p>Highest Tract Percentage<b><FONT COLOR="#807dba"> 100% = 2,208 student households</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
@@ -312,7 +312,7 @@ var config = {
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
-         image: 'images/24_75knoint.png',
+         image: 'images/twentyfourkToseventyfiveKNoInternet.png',
       description: 'Households by Census Tract income <FONT COLOR="#807dba">20k-74.9k</FONT COLOR>. <p>Highest Tract Percentage <b><FONT COLOR="#807dba">36% = 354 student households</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
@@ -376,7 +376,7 @@ var config = {
       alignment: 'right',
       hidden: false,
       title: 'No Internet Access',
-         image: 'images/75knoint.png',
+         image: 'images/seventyfivekNoInternet.png',
       description: 'Households by Census Tract income <b><FONT COLOR="#807dba">>75K</FONT COLOR></b>. <p>Highest Tract Percentage <b><FONT COLOR="#807dba">28.6% = 222 student households</FONT COLOR></b>',
       location: {
         center: [-84.29610, 38.03089],
